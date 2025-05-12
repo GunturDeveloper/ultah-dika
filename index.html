@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultah Dika</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-4">
+
+  <div class="text-center p-6 bg-white rounded-2xl shadow-xl max-w-md">
+    <h1 class="text-4xl font-bold text-purple-700" id="judul">Barakallahu Fi Umrik!</h1>
+    <p class="mt-4 text-lg text-gray-700" id="pesan">
+      Dika, semoga Allah SWT selalu melimpahkan rahmat, kesehatan, dan keberkahan dalam setiap langkah hidupmu. Jadilah pribadi yang semakin taat dan bermanfaat untuk sesama.
+    </p>
+    <p class="mt-6 text-sm text-gray-500">— dari Guntur</p>
+
+    <button
+      id="js"
+      onclick="ubahUcapan()"
+      class="mt-6 px-4 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition"
+    >
+      Klik untuk doa spesial
+    </button>
+  </div>
+
+  <!-- Video tersembunyi -->
+  <video id="ucapanVideo" class="hidden" src="8e731d4caa5e5f7e3e05708968781612.mp4"></video>
+
+  <script>
+    function ubahUcapan() {
+      document.getElementById("js").textContent = "Aamiin ya Rabb!";
+      document.getElementById("judul").textContent = "Barakallahu Fi Umrik, Dika!";
+      document.getElementById("pesan").textContent =
+        "Semoga Allah memanjangkan usiamu dalam kebaikan, memberikan kelimpahan rezeki yang halal dan berkah, serta menjadikanmu pribadi yang sabar, kuat, dan selalu dalam lindungan-Nya.";
+
+      const video = document.getElementById("ucapanVideo");
+      video.play();
+    }
+  </script>
+</body>
+</html>
